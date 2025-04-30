@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Latihan Form Kirim Data</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    form { margin-bottom: 30px; }
+    label { display: block; margin-top: 10px; }
+    input, button { padding: 8px; margin-top: 5px; }
+  </style>
+</head>
+<body>
+
+  <h1>Latihan Form Kirim Data</h1>
+
+  <!-- 1. Kirim data dengan action & method -->
+  <h2>1. Kirim Data ke Halaman Tujuan (Simulasi)</h2>
+  <form action="https://httpbin.org/post" method="POST" target="_blank">
+    <label for="nama">Nama:</label>
+    <input type="text" name="nama" id="nama" required />
+
+    <label for="email">Email:</label>
+    <input type="email" name="email" id="email" required />
+
+    <button type="submit">Kirim (POST)</button>
+  </form>
+
+  <!-- 2. Kirim data pakai JavaScript -->
+  <h2>2. Kirim Data Pakai JavaScript (Tanpa Reload)</h2>
+  <form id="form-js">
+    <label for="namajs">Nama:</label>
+    <input type="text" id="namajs" name="namajs" required />
+
+    <label for="pesan">Pesan:</label>
+    <input type="text" id="pesan" name="pesan" required />
+
+    <button type="submit">Kirim dengan JS</button>
+  </form>
+
+  <div id="output-js"></div>
+
+  <script>
+    document.getElementById("form-js").addEventListener("submit", function (e) {
+      e.preventDefault(); // mencegah reload
+
+      const nama = document.getElementById("namajs").value;
+      const pesan = document.getElementById("pesan").value;
+
+      const outputDiv = document.getElementById("output-js");
+      outputDiv.innerHTML = `<p><strong>Data Terkirim:</strong><br>Nama: ${nama}<br>Pesan: ${pesan}</p>`;
+    });
+  </script>
+
+</body>
+</html>

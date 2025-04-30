@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Latihan Button di Form</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    input, button { padding: 8px; margin-top: 10px; display: block; }
+    .output { margin-top: 20px; color: green; }
+  </style>
+</head>
+<body>
+
+  <h2>Latihan: Submit vs Button Biasa</h2>
+
+  <form id="form-latihan">
+    <label for="nama">Nama:</label>
+    <input type="text" id="nama" name="nama" />
+
+    <!-- Tombol submit -->
+    <button type="submit">Kirim Form (Submit)</button>
+
+    <!-- Tombol biasa -->
+    <button type="button" id="btn-alert">Tampilkan Nama (Button)</button>
+  </form>
+
+  <div class="output" id="output"></div>
+
+  <script>
+    // Tangani form submit
+    document.getElementById("form-latihan").addEventListener("submit", function(e) {
+      e.preventDefault(); // Mencegah reload
+      const nama = document.getElementById("nama").value;
+      document.getElementById("output").innerText = `Form dikirim! Nama: ${nama}`;
+    });
+
+    // Tangani tombol biasa
+    document.getElementById("btn-alert").addEventListener("click", function() {
+      const nama = document.getElementById("nama").value;
+      alert("Halo " + nama + ", ini bukan kirim form ya!");
+    });
+  </script>
+
+</body>
+</html>

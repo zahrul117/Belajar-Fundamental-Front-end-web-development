@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      input:focus-visible {
+        appearance: none;
+        outline: none;
+        box-shadow: 0 0 0 5px rgba(50, 205, 50, 0.6);
+      }
+      label:has(+ input:focus-visible) {
+        font-weight: bold;
+        color: darkblue;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <div class="form-group">
+        <label for="nama">Nama :</label>
+        <input type="text" id="nama" name="nama" />
+      </div>
+      <div class="form-group">
+        <label for="email">Email : </label>
+        <input type="email" id="email" name="email" />
+      </div>
+      <div class="form-group">
+        <label for="password">password : </label>
+        <input type="password" id="password" name="password" />
+      </div>
+      <div class="form-group">
+        <button type="submit">Daftar</button>
+      </div>
+    </form>
+  </body>
+</html>

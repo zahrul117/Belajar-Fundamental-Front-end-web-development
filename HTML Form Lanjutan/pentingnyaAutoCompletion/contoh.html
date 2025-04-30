@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Form dengan Atribut Autocomplete</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      .form-group {
+        margin-bottom: 15px;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      input {
+        padding: 8px;
+        width: 300px;
+      }
+      .btn {
+        padding: 10px 20px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Contoh Form Autocomplete</h1>
+    <form>
+      <div class="form-group">
+        <label for="name">Nama</label>
+        <input type="text" id="name" name="name" autocomplete="name" />
+      </div>
+      <div class="form-group">
+        <label for="telephone">Telepon</label>
+        <input type="tel" id="telephone" name="telephone" autocomplete="tel" />
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" autocomplete="off" />
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          autocomplete="new-password"
+        />
+      </div>
+      <div class="form-group">
+        <label for="password-confirm">Konfirmasi Password</label>
+        <input
+          type="password"
+          id="password-confirm"
+          name="password-confirm"
+          autocomplete="new-password"
+        />
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn">Daftar</button>
+      </div>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulir Registrasi</title>
+  </head>
+  <body>
+    <form>
+      <!-- Username dengan validasi regex -->
+      <label for="username">Username (hanya huruf, angka, dan underscore, tidak diawali angka, 3 hingga 15 karakter):</label>
+      <input
+        type="text"
+        id="username"
+        name="username"
+        pattern="^[A-Za-z][A-Za-z0-9_]{3,15}$"
+        required
+      /><br><br>
+
+      <button type="submit">Kirim</button>
+    </form>
+  </body>
+</html>

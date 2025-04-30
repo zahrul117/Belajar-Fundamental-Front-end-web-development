@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Form pilihan opsi</h2>
+    <form action="" method="post">
+      <label for="hobi">Hobi (Pilih Semua yang Sesuai) : </label>
+      <input type="checkbox" id="hobi" name="hobi" value="membaca" />membaca
+      <input type="checkbox" id="hobi" name="hobi" value="olahraga" />Olahraga
+      <input type="checkbox" id="hobi" name="hobi" value="musik" /> musik
+
+      <label for="jenis_kelamin">Jenis Kelamin</label>
+      <input type="radio" id="pria" name="jenis_kelamin" value="Pria" /> pria
+      <input
+        type="radio"
+        id="wanita"
+        name="jenis_kelamin"
+        value="wanita"
+      />Wanita
+
+      <label for="kota">Pilih Kota : </label>
+      <select name="kota" id="kota">
+        <option value="">--Pilih Kota--</option>
+        <option value="Jambi">Jambi</option>
+        <option value="Jakarta">Jakarta</option>
+        <option value="Surabaya">Surabaya</option>
+      </select>
+
+      <label for="cari">Pencarian (DataList) : </label>
+      <input list="kota-suggestions" id="cari" name="cari" />
+      <datalist id="kota-suggestions">
+        <option value="Jambi"></option>
+        <option value="Jakarta"></option>
+        <option value="Surabaya"></option>
+      </datalist>
+      <button type="submit">Kirim</button>
+    </form>
+  </body>
+</html>

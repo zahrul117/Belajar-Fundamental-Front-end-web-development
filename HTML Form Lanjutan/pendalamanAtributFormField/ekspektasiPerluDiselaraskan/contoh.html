@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latihan Ekspektasi Input</title>
+  </head>
+  <body>
+    <h2>Formulir Pendaftaran</h2>
+    
+    <form action="">
+      <label for="email">Email:</label><br />
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="contoh: kamu@email.com"
+        aria-describedby="emailInfo"
+        required
+      />
+      <br />
+      <small id="emailInfo">Pastikan menggunakan email yang aktif.</small>
+      <br /><br />
+
+      <label for="phone">Nomor Telepon:</label><br />
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        placeholder="contoh: 08123456789"
+        aria-describedby="phoneInfo"
+        required
+      />
+      <br />
+      <small id="phoneInfo">Masukkan nomor telepon yang aktif untuk dihubungi.</small>
+      <br /><br />
+
+      <label for="username">Username:</label><br />
+      <input
+        type="text"
+        id="username"
+        name="username"
+        placeholder="contoh: user123"
+        aria-describedby="usernameInfo"
+        required
+      />
+      <br />
+      <small id="usernameInfo">Username hanya boleh huruf dan angka, tanpa spasi.</small>
+      <br /><br />
+
+      <button type="submit">Daftar</button>
+    </form>
+  </body>
+</html>

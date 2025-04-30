@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form dengan Opsi</title>
+    <style>
+      form {
+        margin: 20px;
+        font-family: Arial, sans-serif;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      input[type="text"] {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 12px;
+      }
+
+      select, input[type="radio"], input[type="checkbox"] {
+        margin-bottom: 12px;
+      }
+
+      button {
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="" method="post">
+      <!-- Checkbox -->
+      <label><strong>Pilih Hobi Anda:</strong></label>
+      <label><input type="checkbox" name="hobi" value="Membaca" /> Membaca</label><br />
+      <label><input type="checkbox" name="hobi" value="Bersepeda" /> Bersepeda</label><br />
+      <label><input type="checkbox" name="hobi" value="Berkebun" /> Berkebun</label><br />
+
+      <!-- Radio -->
+      <label><strong>Jenis Kelamin:</strong></label>
+      <label><input type="radio" name="jenisKelamin" value="Pria" /> Pria</label><br />
+      <label><input type="radio" name="jenisKelamin" value="Wanita" /> Wanita</label><br />
+
+      <!-- Select -->
+      <label><strong>Pilih Kota:</strong></label>
+      <select name="kota" required>
+        <option value="">--Pilih Kota--</option>
+        <option value="Jakarta">Jakarta</option>
+        <option value="Bandung">Bandung</option>
+        <option value="Surabaya">Surabaya</option>
+        <option value="Medan">Medan</option>
+      </select><br />
+
+      <!-- Datalist -->
+      <label><strong>Masukkan Warna Favorit:</strong></label>
+      <input list="warnaList" name="warna" id="warna" />
+      <datalist id="warnaList">
+        <option value="Merah">
+        <option value="Biru">
+        <option value="Hijau">
+        <option value="Kuning">
+      </datalist><br />
+
+      <!-- Button -->
+      <button type="submit">Kirim</button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validasi Sederhana</title>
+</head>
+<body>
+
+<form id="myForm">
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username" required>
+  <button type="submit">Kirim</button>
+</form>
+
+<script>
+    // Ambil elemen form dan input username
+const form = document.getElementById('myForm');
+const usernameInput = form.querySelector('#username');
+
+// Tambahkan event listener saat form disubmit
+form.addEventListener('submit', (event) => {
+  // Mencegah form dikirim
+  event.preventDefault();
+
+  // Validasi input
+  if (usernameInput.value === '') {
+    // Set pesan error kustom jika input kosong
+    usernameInput.setCustomValidity('Username wajib diisi.');
+    // Tampilkan pesan error secara manual
+    alert(usernameInput.validationMessage);
+  } else {
+    // Hapus pesan error jika input valid
+    usernameInput.setCustomValidity('');
+    alert('Form berhasil dikirim!');
+  }
+});
+
+</script>
+</body>
+</html>

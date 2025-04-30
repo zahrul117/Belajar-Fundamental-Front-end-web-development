@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 20px;
+      }
+      input,
+      button {
+        margin-top: 10px;
+        display: block;
+      }
+      img {
+        margin-top: 20px;
+        max-width: 200px;
+        border: 1px solid #ccc;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Form Upload Foto</h2>
+
+    <form action="" id="uploadForm" method="post" enctype="multipart/form-data">
+      <label for="Foto">Pilih foto :</label>
+      <input type="file" id="foto" name="Foto" accept="image/" />
+      <button type="submit">Upload</button>
+    </form>
+    <div id="preview"></div>
+
+    <script>
+      const form = document.getElementById("uploadForm");
+      const fotoInput = document.getElementById("foto");
+      const previewDiv = document.getElementById("preview");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const file = fotoInput.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            previewDiv.innerHTML = `<p>Preview:</p><img src="${e.target.result}" alt="Preview Gambar" />`;
+          };
+          reader.readAsDataURL(file);
+        } else {
+          previewDiv.innerHTML = "<p>Belum ada file yang dipilih.</p>";
+        }
+      });
+    </script>
+  </body>
+</html>

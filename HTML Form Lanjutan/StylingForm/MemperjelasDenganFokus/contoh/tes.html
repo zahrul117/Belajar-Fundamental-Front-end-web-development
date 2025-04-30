@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    input:focus-visible{
+        appearance: none;
+        outline: none;
+        box-shadow: 0 0 0 5px rgba(30, 144, 255, 0.65);
+    }
+    label:has(+ input:focus-visible){
+        font-weight: bold;
+        color: darkblue;
+    }
+</style>
+<body>
+    <form action="">
+        <div class="form-group">
+            <label for="nama">Nama</label>
+            <input type="text" id="nama" name="nama">
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn">Kirim</button>
+        </div>
+    </form>
+</body>
+</html>
